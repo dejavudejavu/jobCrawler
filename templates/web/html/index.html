@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>求职小程序</title>
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<link rel="stylesheet" href="../static/css/index.css">
+		<script src="../static/js/regionInfo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/js/search.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+	</head>
+	<body text='white'>
+		<div class="main">
+			<div class="input-content">
+				<div class="guide">职位关键词</div>
+				<input class='words' type="text" placeholder="如销售总监等" id="words" />
+			</div>
+
+			<div class="input-content">
+				<div class="guide">城市</div>
+				<div class="selection-detail">
+					<select name="province" id="province"></select>
+					<select name="city" id="city"></select>
+					<script src="../static/js/region.js" type="text/javascript"></script>
+				</div>
+			</div>
+
+			<div class="input-content">
+				<div class="guide">行业</div>
+				<div class="selection-detail">
+					<select name="field" id="field"></select>
+					<script src="../static/js/field.js" type="text/javascript" charset="utf-8"></script>
+				</div>
+			</div>
+
+			<div class="input-content">
+				<div class="guide">薪资</div>
+				<div class="range">
+					<div class="salary left">
+						<button class="tui-number-cell" onclick="nextNum()">-</button>
+						<input class="tui-number-cell" type="number" id='min' value="10"></input>
+						<button class="tui-number-cell" onclick="prevNum()">+</button>
+						<div class="tui-number-cell text">k&nbsp; ~&nbsp; </div>
+						<button class="tui-number-cell" onclick="nextNum1()">-</button>
+						<input class="tui-number-cell" type="number" id='max' value="11"></input>
+						<button class="tui-number-cell" onclick="prevNum1()">+</button>
+						<div class="tui-number-cell text">k</div>
+						<script src="../static/js/salary.js" type="text/javascript" charset="utf-8"></script>
+					</div>
+				</div>
+				<div class="btn-content">
+					<button class='search' onclick="setLoading()" type="warn">一键查询</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
